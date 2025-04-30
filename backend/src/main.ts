@@ -6,11 +6,12 @@ async function bootstrap() {
   
   // Enable CORS
   app.enableCors({
-    origin: 'http://localhost:3000', // Your frontend URL
-    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    origin: process.env.FRONTEND_URL || 'http://localhost:3000',
     credentials: true,
   });
-  
-  await app.listen(5000); // Run backend on port 5000
+
+  // Use environment port or default to 5000
+  const port = process.env.PORT || 5000;
+  await app.listen(port);
 }
 bootstrap();
