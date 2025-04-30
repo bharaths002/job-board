@@ -32,7 +32,7 @@ A full-stack job board platform built with Next.js and NestJS, designed to conne
 - PostgreSQL
 - npm or yarn
 
-## 🔧 Installation
+## 🔧 Installation & Deployment
 
 1. Clone the repository
 ```bash
