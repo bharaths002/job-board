@@ -1,9 +1,20 @@
 'use client';
 
-import { Group, TextInput, Select, RangeSlider, Text, Box } from '@mantine/core';
+import React, { useState, useEffect } from 'react';
+import { Box, TextInput, Select, Text, Group, RangeSlider } from '@mantine/core';
 import { IconSearch, IconMapPin, IconBriefcase } from '@tabler/icons-react';
 
 export function SearchFilters() {
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) {
+    return null;
+  }
+
   return (
     <Box 
       py="xl" 
