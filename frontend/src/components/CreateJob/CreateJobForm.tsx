@@ -24,7 +24,7 @@ interface FormData {
     jobDescription: string;
     requirements: string;
     responsibilities: string;
-    applicationDeadline: Date | null;  // Change from Date to Date | null
+    applicationDeadline: Date | null;  
     status: 'draft' | 'published';
 }
 
@@ -46,14 +46,7 @@ export function CreateJobForm({ onJobCreated, opened, onClose }: CreateJobFormPr
     });
     const [isLoading, setIsLoading] = React.useState(false);
 
-    useEffect(() => {
-        setMounted(true);
-    }, []);
-
-    if (!mounted) {
-        return null;
-    }
-
+    // Replace the useState with a constant
     const locationOptions = [
         { value: 'Chennai', label: 'Chennai' },
         { value: 'Mumbai', label: 'Mumbai' },
@@ -61,6 +54,15 @@ export function CreateJobForm({ onJobCreated, opened, onClose }: CreateJobFormPr
         { value: 'Hyderabad', label: 'Hyderabad' },
         { value: 'other', label: 'Other Location' }
     ];
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
+
+    // Return null or loading state while not mounted
+    if (!mounted) {
+        return null;
+    }
 
     const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
@@ -122,14 +124,6 @@ export function CreateJobForm({ onJobCreated, opened, onClose }: CreateJobFormPr
         }
     };
 
-    const formatSalary = (value: number) => {
-        return `${(value / 100000).toFixed(1)} LPA`;
-    };
-
-    const parseSalary = (value: string) => {
-        const numericValue = value.replace(/[^0-9.]/g, '');
-        return Math.round(parseFloat(numericValue) * 100000) || 0;
-    };
 
     return (
         <Modal 

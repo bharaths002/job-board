@@ -94,7 +94,8 @@ cd job-board
 Contributions are welcome! Please feel free to submit a Pull Request.
 
 ## 📝 License
-This project is licensed under the MIT License - see the LICENSE file for details.
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📬 Contact
 Bharath S - GitHub, Email-bharath0218@gmail.com
