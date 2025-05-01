@@ -1,9 +1,9 @@
 [build]
 builder = "nixpacks"
-buildCommand = "npm install --prefix backend && npm run build --prefix backend"
+buildCommand = "cd backend && npm install && npm run build"
 
 [deploy]
-startCommand = "npm run start --prefix backend"
+startCommand = "cd backend && npm run start"
 healthcheckPath = "/api/health"
 healthcheckTimeout = 100
 
@@ -11,4 +11,4 @@ healthcheckTimeout = 100
 port = 5000
 
 [nixpacks]
-node_version = "18.x"
+engines = { node = "18.x" }
