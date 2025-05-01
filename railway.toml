@@ -1,6 +1,7 @@
+# 🚀 Railway Deployment Configuration
 [build]
 builder = "nixpacks"
-buildCommand = "cd backend && npm install && npm run build"
+buildCommand = "cd backend && npm install && npm ci && npm run build"
 
 [deploy]
 startCommand = "node backend/server.js"
@@ -11,4 +12,4 @@ healthcheckTimeout = 100
 port = 5000
 
 [nixpacks]
-engines = { node = "18.x" }
+engines = { node = "18" }
