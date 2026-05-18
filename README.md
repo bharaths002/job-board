@@ -93,16 +93,9 @@ cd job-board
 ## 🤝 Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📬 Contact
-Bharath S - GitHub, Email-bharath0218@gmail.com
+Bharath S - GitHub, Email-bharaths0218@gmail.com
 
 Project Link: https://github.com/bharaths002/job-board
 
-## 🙏 Acknowledgments
-- Mantine UI for the component library
-- Next.js and NestJS communities
-- All contributors who help improve this project
